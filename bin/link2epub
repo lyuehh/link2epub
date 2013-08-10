@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+if ARGV.include?('--help') or ARGV.include?('-h')
+  puts "haha"
+  exit 0
+end
+
+require 'link2epub'
+Link2Epub.new(ARGV[0]).run
