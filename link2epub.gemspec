@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'link2epub'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.summary = "give me an links list, I make a epub for you"
   s.description = "link2epub is a tool to turn a list of url links to a epub book."
   s.licenses = ["MIT"]
