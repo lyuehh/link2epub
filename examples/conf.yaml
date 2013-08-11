@@ -5,3 +5,8 @@ author: 陈浩
 description: 陈浩的博客
 links_file: links2.txt
 file_name: coolshell.epub
+rule:
+    title: .post h2
+    author: .post .author
+    date: .post .date
+    content: .post .content

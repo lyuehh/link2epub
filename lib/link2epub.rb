@@ -57,10 +57,10 @@ class Epub
             art = Article.new(l)
             art.tpl = "../tpl/article.tpl"
             art.file = "./file#{i+1}.html"
-            art.content = Nokogiri::HTML(open(art.link)).css('.post .content').to_html
-            art.title = Nokogiri::HTML(open(art.link)).css('.post h2').text
-            art.author = Nokogiri::HTML(open(art.link)).css('.post .author').text
-            art.date = Nokogiri::HTML(open(art.link)).css('.post .date').text
+            art.content = Nokogiri::HTML(open(art.link)).css(@conf['rule']['content']).to_html
+            art.title = Nokogiri::HTML(open(art.link)).css(@conf['rule']['title']).text
+            art.author = Nokogiri::HTML(open(art.link)).css(@conf['rule']['author']).text
+            art.date = Nokogiri::HTML(open(art.link)).css(@conf['rule']['date']).text
             art.to_file
             @articles.push(art)
         end
